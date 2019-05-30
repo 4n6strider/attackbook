@@ -2,10 +2,8 @@
 
 ## Enumerating with nmap
 
-* TCP and UDP scan that saves to report files 
-
 ```bash
-nmap -v -n -Pn -sT -sU -p U:137-139,T:137-139,T:445 --oA report_smb $range
+nmap -v -n -Pn -sT -sU -p U:137-139,T:137-139,T:445 --open --oA report_smb $range
 grep open report_smb.gnmap | cut -d" " -f2 > hosts_smb.txt
 ```
 

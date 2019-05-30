@@ -29,6 +29,7 @@
 * [HTTP/S](enumerate/http-s.md)
 * [FTP](enumerate/ftp.md)
 * [SMB](enumerate/smb.md)
+* [SNMP](enumerate/snmp.md)
 * [SSH](enumerate/ssh.md)
 * [NFS](enumerate/nfs.md)
 * [MSSQL](enumerate/mssql.md)
