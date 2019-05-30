@@ -1,7 +1,3 @@
----
-description: Preparations for a penetration test
----
-
 # Checklist
 
 This section contains notes on setup for a penetration test.
@@ -14,8 +10,6 @@ This section contains notes on setup for a penetration test.
 * [ ] setup virtual machine\(s\)
 * [ ] configure and snapshot virtual machine\(s\)
 * [ ] configure Kali Linux
-
-{% page-ref page="logbook.md" %}
 
 
 

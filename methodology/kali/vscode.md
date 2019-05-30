@@ -1,12 +1,29 @@
 # VS Code
 
-I prefer to use Visual Studio Code.  This allows me to run multiple terminals within vscode and then view output of scans, edit exploit code and commit files to my git repo all within one tool.
+I prefer to use Visual Studio Code.  This allows me to run multiple terminals within vscode and then view output of scans, edit exploit code, edit scripts and commit files to my git repo all within one tool.
 
 {% embed url="https://code.visualstudio.com/Download" %}
 
-{% hint style="info" %}
-You can export your list of installed vscode extensions and install them using the command line.
-{% endhint %}
+## Git Configuration
+
+```bash
+#Configure git globals
+git config --global user.name "name"
+git config --global user.email "email@"
+git config --global color.ui true
+git config --global core.editor nano
+
+#Generate an SSH key
+ssh-keygen -t rsa -b 4096 -C "email@"
+​
+#copy the pub key to your git provider as an authorized SSH key
+cat ./rsa_id.pub
+
+#clone your repo
+git clone user@url:/repository-name.git
+```
+
+## Manage Extensions
 
 Export extensions from Windows
 
@@ -22,7 +39,7 @@ cat ext.txt | xargs -L 1 code --install-extension --user-data-dir /root/.vscode/
 
 ### Workspace Template
 
-```text
+```javascript
 {
 	"folders": [
 		{

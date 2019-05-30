@@ -1,8 +1,6 @@
 # VMWare
 
-VMWare specific setup steps:
-
-* adjust for HiDPI
+* [ ] Adjust screen resolution
 
 ```bash
 gsettings set org.gnome.desktop.interface scaling-factor 2 

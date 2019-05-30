@@ -1,5 +1,5 @@
 ---
-description: Overview of attack methodology
+description: Penetration Testing Playbook
 ---
 
 # Overview
@@ -20,13 +20,9 @@ Active information gathering by flyover network scanning and then more detailed 
 
 Using the results of recon and enumeration, attempt exploits against targets to obtain footholds.
 
-### Elevate
+### Post Exploit
 
-Once successfully exploiting targets, seek to elevate access to hosts, networks, users and data.
-
-### Persist
-
-Establish persistent, discrete and reusable methods for access and data ex filtration.
+Once successfully exploiting targets, seek to elevate access to hosts, networks, users and data via privilege escalation and persistence.
 
 ### Cleanup
 
