@@ -13,7 +13,7 @@ nmap -sV --script=nfs-showmount $ip
 ### NFS commands
 
 ```bash
-showmount -e [ip]
+showmount -e $ip
 
 mkdir /temp/
 mount -t nfs [ip]:/ /temp -o nolock

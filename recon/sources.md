@@ -1,8 +1,4 @@
----
-description: Passive information gathering
----
-
-# Recon
+# Sources
 
 ### Common OSINT Sources
 

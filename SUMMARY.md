@@ -1,59 +1,67 @@
 # Table of contents
 
 * [Overview](README.md)
-* [To Do](to-do.md)
 
 ## Prep
 
-* [Checklist](methodology/checklist.md)
 * [Report](methodology/report.md)
 * [Machines](methodology/machines/README.md)
   * [Virtualbox](methodology/machines/virtualbox.md)
   * [VMWare](methodology/machines/vmware.md)
 * [Kali Linux](methodology/kali/README.md)
   * [VS Code](methodology/kali/vscode.md)
-* [Recon](methodology/recon/README.md)
-  * [Files](methodology/recon/files.md)
-  * [Google](methodology/recon/web.md)
-  * [DNS](methodology/recon/dns.md)
-  * [Email](methodology/recon/email.md)
-  * [Websites](methodology/recon/public-databases/README.md)
-    * [Location](methodology/recon/public-databases/location.md)
-* [Metasploit](methodology/metasploit/README.md)
-  * [Workflow](methodology/metasploit/workflow.md)
-  * [Portscanning](methodology/metasploit/portscanning.md)
-* [Enumerate](methodology/enumerate/README.md)
-  * [Vulnerability Scanners](methodology/enumerate/vulnerability-scanners.md)
-  * [Network](methodology/enumerate/network.md)
-  * [SMB](methodology/enumerate/smb.md)
-  * [Oracle](methodology/enumerate/oracle.md)
-  * [MSSQL](methodology/enumerate/mssql.md)
-  * [NFS](methodology/enumerate/nfs.md)
-  * [HTTP/S](methodology/enumerate/http-s.md)
-  * [DNS](methodology/enumerate/dns.md)
-  * [FTP](methodology/enumerate/ftp.md)
-  * [SSH](methodology/enumerate/ssh.md)
-* [Exploit](methodology/exploit/README.md)
-  * [Metasploit](methodology/exploit/metasploit.md)
-  * [SQL](methodology/exploit/sql.md)
-  * [Shells](methodology/exploit/shells.md)
-  * [Passwords](methodology/exploit/passwords.md)
-  * [Buffer Overflows](methodology/exploit/buffer-overflows.md)
-  * [Compiling](methodology/exploit/compiling.md)
-  * [Hosting](methodology/exploit/hosting.md)
-  * [ARP Spoofing](methodology/exploit/arp-spoofing.md)
-* [Elevate](methodology/elevate/README.md)
-  * [Linux List](methodology/elevate/linux-list.md)
-  * [Linux Elevation](methodology/elevate/linux-elevation.md)
-  * [Windows List](methodology/elevate/windows-list.md)
-  * [Windows Elevation](methodology/elevate/windows-elevation.md)
-* [Persist](methodology/persist.md)
-* [Cleanup](methodology/cleanup/README.md)
-  * [Linux Tracks](methodology/cleanup/linux-tracks.md)
+* [To Do](methodology/to-do.md)
+
+## Recon
+
+* [Sources](recon/sources.md)
+* [Google](recon/google.md)
+* [DNS](recon/dns.md)
+* [Email](recon/email.md)
+* [Websites](recon/websites.md)
+* [Location](recon/location.md)
+* [Files](recon/files.md)
+
+## Enumerate
+
+* [Network](enumerate/network.md)
+* [SMB](enumerate/smb.md)
+* [Oracle](enumerate/oracle.md)
+* [MSSQL](enumerate/mssql.md)
+* [NFS](enumerate/nfs.md)
+* [HTTP/S](enumerate/http-s.md)
+* [DNS](enumerate/dns.md)
+* [FTP](enumerate/ftp.md)
+* [SSH](enumerate/ssh.md)
+
+## Exploit
+
+* [Searching](exploit/searchsploit.md)
+* [Compiling](exploit/compiling.md)
+* [Hosting](exploit/hosting.md)
+* [Shells](exploit/shells.md)
+* [SQL](exploit/sql.md)
+* [Passwords](exploit/passwords.md)
+* [Buffer Overflows](exploit/buffer-overflows.md)
+* [ARP Spoofing](exploit/arp-spoofing.md)
+
+## Post-Exploit
+
+* [Linux Tracks](post-exploit/linux-tracks.md)
+* [Elevate](post-exploit/elevate/README.md)
+  * [Linux List](post-exploit/elevate/linux-list.md)
+  * [Linux Elevation](post-exploit/elevate/linux-elevation.md)
+  * [Windows List](post-exploit/elevate/windows-list.md)
+  * [Windows Elevation](post-exploit/elevate/windows-elevation.md)
+
+## Metasploit
+
+* [Basics](metasploit/untitled.md)
+* [Workflow](metasploit/msf-workflow.md)
 
 ## Reference
 
-* [Websites](reference/websites.md)
+* [Bookmarks](reference/bookmarks.md)
 * [Networking](reference/networking/README.md)
   * [Ports](reference/networking/ports.md)
 * [Windows](reference/windows/README.md)
@@ -73,12 +81,4 @@
   * [Encoding](reference/linux/encoding.md)
 * [Hashing](reference/hashing.md)
 * [ASCII](reference/ascii.md)
-
-## Manual Workflow
-
-* [Untitled](manual-workflow/untitled.md)
-
-## Metasploit Workflow
-
-* [Untitled](metasploit-workflow/untitled.md)
 

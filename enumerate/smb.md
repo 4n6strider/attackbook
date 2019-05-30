@@ -25,7 +25,7 @@
 * TCP and UDP scan that saves to report files 
 
 ```bash
-nmap -v -n -Pn -sT -sU -p U:137-139,T:137-139,T:445 --oA report_smb [range]
+nmap -v -n -Pn -sT -sU -p U:137-139,T:137-139,T:445 --oA report_smb $range
 
 grep open report_smb.gnmap | cut -d" " -f2 > hosts_smb.txt
 ```
@@ -53,7 +53,7 @@ nmap --script=samba-vuln-cve-2012-1182 --script-args=unsafe=1 -p 139 -oA report_
 ```bash
 nmap -sU -sS --script smb-brute.nse --script-args=unsafe=1 -p U:137-139,T:137-139,T:445 -oA report_smb_brute -iL hosts_smb.txt
 
---script-args userdb=users.txt,passdb=passwords.txt <target>
+--script-args userdb=users.txt,passdb=passwords.txt $ip
 ```
 
 * SMB Vuln Scripts
@@ -71,7 +71,7 @@ nbtscan -v -s " " -h -f hosts_smb.txt
 ### Enumerate everything with enum4linux
 
 ```bash
-enum4linux -a [host] 
+enum4linux -a $ip
 
 for ip in $(cat hosts_smb.txt);do enum4linux -a $ip >> report_smb_enum4l.txt;done
 
@@ -81,14 +81,14 @@ for ip in $(cat hosts_smb.txt);do enum4linux -a $ip > report_$ip_smb.txt & ;done
 ### Connect to Shares with smbclient
 
 ```bash
-smbclient -L host 
-smbclient \\\\host\\share
+smbclient -L $ip
+smbclient \\\\$ip\\$share
 smb: \> h
 
-smbclient -L 192.168.1.102
-smbclient //192.168.1.106/tmp
-smbclient \\\\192.168.1.105\\ipc$ -U john 
-smbclient //192.168.1.105/ipc$ -U john
+smbclient -L $ip
+smbclient //$ip/tmp
+smbclient \\\\$ip\\ipc$ -U $user
+smbclient //$ip/ipc$ -U $user
 ```
 
 ### Search exploits with searchsploit
@@ -96,11 +96,5 @@ smbclient //192.168.1.105/ipc$ -U john
 ```bash
 searchsploit Microsoft smb
 searchsploit samba
-```
-
-### Metasploit
-
-```bash
-msf> use scanner/smb/smb_version
 ```
 

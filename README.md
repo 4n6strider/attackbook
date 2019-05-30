@@ -24,8 +24,6 @@ Using the results of recon and enumeration, attempt exploits against targets to 
 
 Once successfully exploiting targets, seek to elevate access to hosts, networks, users and data via privilege escalation and persistence.
 
-### Cleanup
-
 Remove exploits, persistence, tools and any other artifacts. 
 
 ### Report

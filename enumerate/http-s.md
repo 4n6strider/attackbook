@@ -27,6 +27,7 @@ nmap --script http-form-fuzzer --script-args 'http-form-fuzzer.targets={1={path=
 ```bash
 nikto -h $ip
 nikto -C all -h http://$ip
+nmap -p80,443 $range -oG - | nikto.pl -h -
 ```
 
 ### Directory scans
