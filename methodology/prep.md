@@ -2,7 +2,7 @@
 description: Preparations for a penetration test
 ---
 
-# Prep
+# Checklist
 
 This section contains notes on setup for a penetration test.
 

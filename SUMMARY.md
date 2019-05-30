@@ -2,23 +2,24 @@
 
 * [Overview](README.md)
 * [To Do](to-do.md)
+* [Untitled](untitled.md)
 
-## Methodology
+## Prep
 
-* [Prep](methodology/prep/README.md)
-  * [Report](methodology/prep/report.md)
-  * [Logbook](methodology/prep/logbook.md)
-  * [Repository](methodology/prep/repository.md)
-  * [Virtual Machines](methodology/prep/virtual-machines/README.md)
-    * [Virtualbox](methodology/prep/virtual-machines/virtualbox.md)
-    * [VMWare](methodology/prep/virtual-machines/vmware.md)
-  * [Kali Setup](methodology/prep/kali-setup/README.md)
-    * [Packages](methodology/prep/kali-setup/packages.md)
-    * [VS Code](methodology/prep/kali-setup/vs-code.md)
-    * [Tools](methodology/prep/kali-setup/tools.md)
-    * [Git Client](methodology/prep/kali-setup/git-client.md)
-    * [Aliases](methodology/prep/kali-setup/aliases.md)
-    * [Scripts](methodology/prep/kali-setup/scripts.md)
+* [Checklist](methodology/prep.md)
+* [Report](methodology/report.md)
+* [Logbook](methodology/logbook.md)
+* [Repository](methodology/repository.md)
+* [Virtual Machines](methodology/virtual-machines/README.md)
+  * [Virtualbox](methodology/virtual-machines/virtualbox.md)
+  * [VMWare](methodology/virtual-machines/vmware.md)
+* [Kali Setup](methodology/kali-setup/README.md)
+  * [Packages](methodology/kali-setup/packages.md)
+  * [VS Code](methodology/kali-setup/vs-code.md)
+  * [Tools](methodology/kali-setup/tools.md)
+  * [Git Client](methodology/kali-setup/git-client.md)
+  * [Aliases](methodology/kali-setup/aliases.md)
+  * [Scripts](methodology/kali-setup/scripts.md)
 * [Recon](methodology/recon/README.md)
   * [Files](methodology/recon/files.md)
   * [Google](methodology/recon/web.md)
@@ -26,6 +27,9 @@
   * [Email](methodology/recon/email.md)
   * [Websites](methodology/recon/public-databases/README.md)
     * [Location](methodology/recon/public-databases/location.md)
+* [Metasploit](methodology/metasploit/README.md)
+  * [Workflow](methodology/metasploit/workflow.md)
+  * [Portscanning](methodology/metasploit/portscanning.md)
 * [Enumerate](methodology/enumerate/README.md)
   * [Vulnerability Scanners](methodology/enumerate/vulnerability-scanners.md)
   * [Network](methodology/enumerate/network.md)
@@ -77,4 +81,12 @@
   * [Encoding](reference/linux/encoding.md)
 * [Hashing](reference/hashing.md)
 * [ASCII](reference/ascii.md)
+
+## Manual Workflow
+
+* [Untitled](manual-workflow/untitled.md)
+
+## Metasploit Workflow
+
+* [Untitled](metasploit-workflow/untitled.md)
 
