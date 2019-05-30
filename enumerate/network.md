@@ -55,6 +55,17 @@ grep Up flyover_ping.gnmap | cut -d" " -f2 > hosts.txt
 #make a directory for each host
 for host in $(cat hosts.txt); do mkdir $host; done
 
+#determine if host is behind a firewall
+nmap -sA $ip
+nmap -PN $ip
+
+#Decoys
+nmap -n -D$d1,$d2,$d3 $ip
+
+#Set source port
+nmap -g $source_port ...
 
 ```
+
+
 

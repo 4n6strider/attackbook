@@ -25,18 +25,19 @@
 ## Enumerate
 
 * [Network](enumerate/network.md)
-* [SMB](enumerate/smb.md)
-* [Oracle](enumerate/oracle.md)
-* [MSSQL](enumerate/mssql.md)
-* [NFS](enumerate/nfs.md)
-* [HTTP/S](enumerate/http-s.md)
 * [DNS](enumerate/dns.md)
+* [HTTP/S](enumerate/http-s.md)
 * [FTP](enumerate/ftp.md)
+* [SMB](enumerate/smb.md)
 * [SSH](enumerate/ssh.md)
+* [NFS](enumerate/nfs.md)
+* [MSSQL](enumerate/mssql.md)
+* [Oracle](enumerate/oracle.md)
 
 ## Exploit
 
 * [Searching](exploit/searchsploit.md)
+* [Payloads](exploit/payloads.md)
 * [Compiling](exploit/compiling.md)
 * [Hosting](exploit/hosting.md)
 * [Shells](exploit/shells.md)
@@ -57,6 +58,8 @@
 ## Metasploit
 
 * [Basics](metasploit/untitled.md)
+* [Exploits](metasploit/exploits.md)
+* [Meterpreter](metasploit/meterpreter.md)
 * [Workflow](metasploit/msf-workflow.md)
 
 ## Reference
