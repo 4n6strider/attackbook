@@ -39,6 +39,7 @@
 
 * [Searching](exploit/searchsploit.md)
 * [Payloads](exploit/payloads.md)
+* [Injection](exploit/injection.md)
 * [Compiling](exploit/compiling.md)
 * [Hosting](exploit/hosting.md)
 * [Shells](exploit/shells.md)

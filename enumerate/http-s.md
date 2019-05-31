@@ -37,6 +37,14 @@ nikto -C all -h http://$ip
 nmap -p80,443 $range -oG - | nikto.pl -h -
 ```
 
+## gobuster
+
+```bash
+gobuster -u http://$ip -w /usr/share/seclists/Discovery/Web_Content/common.txt -s '200,204,301,302,307,403,500' -e
+gobuster -u http://$IP -w /usr/share/seclists/Discovery/Web_Content/Top1000-RobotsDisallowed.txt
+gobuster -u http://$IP -w /usr/share/seclists/Discovery/Web_Content/common.txt
+```
+
 ## Directory scans
 
 ```bash
@@ -48,7 +56,6 @@ folders = ["/usr/share/dirb/wordlists", "/usr/share/dirb/wordlists/vulns"]
 #for each folder and file
 dirb [url] [folder/file] [report] -S -r
 
-gobuster -u http://$ip -w /usr/share/seclists/Discovery/Web_Content/common.txt -s '200,204,301,302,307,403,500' -e
 ```
 
 ## wfuzz

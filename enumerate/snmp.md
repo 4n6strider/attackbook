@@ -17,13 +17,34 @@ grep open report_snmp.gnmap | cut -d" " -f2 > hosts_snmp.txt
 nmap -v -n -Pn -p 161 --script=snmp-info $ip
 ```
 
+## Mibs
 
-
+```bash
 apt-get install snmp-mibs-downloader download-mibs 
+echo "" > /etc/snmp/snmp.conf
+```
 
-echo "" &gt; /etc/snmp/snmp.conf
+## Wordlists
+
+```bash
+/usr/share/metasploit-framework/data/wordlists/snmp_default_pass.txt
+```
+
+## Enumeration Tools
+
+```bash
+onesixtyone -c public -i $ip
+
+snmpcheck -t $ip -c public
+
+snmpwalk -c public -v1 $ip 1| grep hrSWRunName|cut -d* * -f 
+
+snmpenum -t $ip
+```
 
 
 
-/usr/share/metasploit-framework/data/wordlists/snmp\_default\_pass.txt
+
+
+
 
