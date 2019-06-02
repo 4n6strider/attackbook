@@ -64,6 +64,10 @@
 * [Meterpreter](metasploit/meterpreter.md)
 * [Workflow](metasploit/msf-workflow.md)
 
+## Scenarios
+
+* [Windows-FTP-WWW](scenarios/windows-ftp-www.md)
+
 ## Reference
 
 * [Bookmarks](reference/bookmarks.md)

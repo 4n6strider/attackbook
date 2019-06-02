@@ -1,5 +1,37 @@
 # To Do
 
+Google drive
+
+Remove keyring when changing root password?
+
+```text
+gnome-control-center online-accounts > google drive sync
+```
+
+
+
+apt-get install ftp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 look at [https://jivoi.github.io/2015/08/21/pentest-tips-and-tricks-number-2/](https://jivoi.github.io/2015/08/21/pentest-tips-and-tricks-number-2/)
 
 banner grap with curl -i -L -s 
