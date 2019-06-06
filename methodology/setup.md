@@ -97,12 +97,14 @@ SCRIPT
 ## Vagrant Commands
 
 ```text
-#start vm
-vagrant up
-
-#connect
-vagrant ssh
-
+vagrant up      #start vm
+vagrant ssh     #connect
+vagrant status
+vagrant halt     #graceful stop
+vagrant suspend
+vagrant resume
+vagrant restart #same as halt + resume
+vagrant destroy
 ```
 
 Linux Config
