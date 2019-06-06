@@ -4,12 +4,8 @@
 
 ## Prep
 
-* [Report](methodology/report.md)
-* [Machines](methodology/machines/README.md)
-  * [Virtualbox](methodology/machines/virtualbox.md)
-  * [VMWare](methodology/machines/vmware.md)
-* [Kali Linux](methodology/kali/README.md)
-  * [VS Code](methodology/kali/vscode.md)
+* [Overview](methodology/overview.md)
+* [Setup](methodology/setup.md)
 * [To Do](methodology/to-do.md)
 
 ## Recon
@@ -88,6 +84,7 @@
   * [Network](reference/linux/network.md)
   * [IP Tables](reference/linux/ip-tables.md)
   * [Encoding](reference/linux/encoding.md)
+  * [Tmux](reference/linux/tmux.md)
 * [Hashing](reference/hashing.md)
 * [ASCII](reference/ascii.md)
 

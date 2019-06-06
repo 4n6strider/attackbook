@@ -1,5 +1,10 @@
 # Bookmarks
 
+### Kali
+
+* [Offensive Security Appliances](https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/)
+* [Kali Images](https://www.kali.org/downloads/)
+
 ### Exploit Databases
 
 * [Exploit DB](https://www.exploit-db.com/)
@@ -70,7 +75,13 @@
 * [Practice URLs](https://www.amanhardikar.com/mindmaps/PracticeUrls.html)
 * [Vulnerable Apps List](https://www.amanhardikar.com/mindmaps/PracticeUrls.html)
 * [Hacker High School](http://www.hackerhighschool.org/)
-* 
+
+### VM Sources
+
+* [Windows \(IE\)](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
+* [Virtual Box Images](https://www.osboxes.org/virtualbox-images/)
+* [OldApps](http://www.oldapps.com/)
+
 ### Hardware
 
 * [Hak5](https://shop.hak5.org/)

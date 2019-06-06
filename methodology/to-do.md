@@ -1,20 +1,49 @@
 # To Do
 
-Google drive
+## ProxyChains
 
-Remove keyring when changing root password?
-
-```text
-gnome-control-center online-accounts > google drive sync
+```bash
+nano /etc/proxychains.conf
 ```
 
+## TMUX
 
+Commands
 
-apt-get install ftp
+```text
+tmux new -s session_name
+tmux attach -t session_name
+tmux list-sessions
+tmux detach (prefix + d)
 
+tmux split-window (prefix + ")
+tmux split-window -h (prefix + %)
 
+tmux source-file ~/.tmux.conf
+```
 
+Customization
 
+```text
+# remap prefix to Control + a
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+
+# force a reload of the config file
+unbind r
+bind r source-file ~/.tmux.conf
+
+# quick pane cycling
+unbind ^A
+bind ^A select-pane -t :.+
+```
+
+Logging
+
+```text
+tmux pipe-pane -o 'cat >>~/output.#I-#P'
+```
 
 
 

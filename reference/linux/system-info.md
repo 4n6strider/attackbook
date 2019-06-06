@@ -23,5 +23,8 @@ history
 last
 last <user>
 finger <user>
+
+#packages
+dpkg --list 
 ```
 
