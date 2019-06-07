@@ -47,7 +47,32 @@ tmux pipe-pane -o 'cat >>~/output.#I-#P'
 
 
 
+## SSH Tunneling
 
+```text
+#dynamic socks5 proxy that runs as forked daemon with no shell
+
+#edit /etc/ssh/sshd_config
+AllowTcpForwarding yes
+GatewayPorts yes
+
+#start process
+ssh -CnfND 8080 user@localhost      #localhost
+ssh -CnfND $ip:8080 user@localhost  #$ip only
+ssh -CnfND *:8080 user@localhost    #all interfaces
+
+#verify with
+netstat -tulnp
+
+#kill pid to stop
+ps -aux | grep 8080
+
+
+#local port through tunnel to remote host
+ssh -L source_port:forward_to_host:destination_port via_host
+
+ssh -L 33389:$target:3389 localhost
+```
 
 
 

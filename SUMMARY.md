@@ -39,6 +39,7 @@
 * [Compiling](exploit/compiling.md)
 * [Hosting](exploit/hosting.md)
 * [Shells](exploit/shells.md)
+* [SSH Tunneling](exploit/ssh-tunneling.md)
 * [SQL](exploit/sql.md)
 * [Passwords](exploit/passwords.md)
 * [Buffer Overflows](exploit/buffer-overflows.md)
