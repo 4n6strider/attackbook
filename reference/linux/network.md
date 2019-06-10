@@ -1,6 +1,13 @@
 # Network
 
+```bash
+#check DNS resolvers
+nmcli device show $interface | grep IP4.DNS
 
+#show wifi access points
+nmcli device wifi list
+
+```
 
 ```bash
 #show active connections
